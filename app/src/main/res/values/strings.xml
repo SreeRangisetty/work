@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string-array name="priority_levels">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="task_status">
+        <item>New</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+    </string-array>
+    <string-array name="task_categories">
+        <item>Work</item>
+        <item>Personal</item>
+        <item>Study</item>
+    </string-array>
+</resources>

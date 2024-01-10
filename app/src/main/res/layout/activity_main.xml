@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/titleInput"
+         android:hint="Enter task title"
+         android:layout_margin="5dp"
+         android:height="48dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionInput"
+        android:hint="Enter task description"
+        android:layout_below="@id/titleInput"
+        android:layout_margin="5dp"
+        android:height="48dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskInput"
+        android:hint="Enter task..."
+        android:layout_margin="5dp"
+        android:height="48dp"
+        android:layout_below="@id/descriptionInput"/>
+    <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dueDate"
+        android:layout_below="@id/taskInput"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true" />
+        />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/priority"
+        android:layout_below="@id/dueDate"
+        android:layout_margin="5dp"
+        android:padding="16dp"
+        android:entries="@array/priority_levels"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusSpinner"
+        android:layout_below="@id/priority"
+        android:entries="@array/task_status"
+        android:padding="16dp"
+        android:layout_margin="5dp"
+        />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/categorySpinner"
+        android:layout_below="@+id/statusSpinner"
+        android:layout_margin="5dp"
+        android:padding="16dp"
+        android:entries="@array/task_categories"/>
+    <TextView
+        android:id="@+id/taskDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categorySpinner"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:layout_below="@id/priority"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="80dp"
+        android:onClick="addTask"
+        android:padding="16dp"/>
+
+</RelativeLayout>
